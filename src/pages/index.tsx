@@ -17,18 +17,17 @@ export default function Home() {
   if (auth.error) {
     return <div>Oops... {auth.error.message}</div>;
   }
-  
+
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24`}
     >
       {auth.isAuthenticated && (<div>
         <p>Hello {auth.user?.profile.name}{" "}</p>
-        <button onClick={() => void auth.removeUser()}>Log out</button>
       </div>)
       }
-      <button onClick={() => void auth.signinRedirect()}>Log in</button>
-      ;
+      {auth.isAuthenticated && <button onClick={() => void auth.removeUser()}>Log out</button>}
+      {!auth.isAuthenticated && <button onClick={() => void auth.signinRedirect()}>Log in</button>}
     </main>
   )
 }

@@ -4,9 +4,9 @@ import { AuthProvider } from 'react-oidc-context';
 
 const oidcConfig = {
     client_id: 'pres',
-    redirect_uri: 'https://localhost:3000/authentication/callback',
+    redirect_uri: 'https://localhost:3000',
     scope: 'openid profile email api offline_access',
-    authority: 'https://auth.ncats.nih.gov/_api/v2/auth/NCI-CCR-TEST',
+    authority: 'https://auth.ncats.nih.gov/_api/v2/auth/NCI-CCR-TEST'
 };
 
 export default function App({Component, pageProps}: AppProps) {
