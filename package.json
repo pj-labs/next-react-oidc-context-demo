@@ -1,6 +1,6 @@
 {
   "name": "next-react-oidc-context-demo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo -p 3001  | npx local-ssl-proxy --source 3000 --target 3001",
